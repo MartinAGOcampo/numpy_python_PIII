@@ -37,20 +37,29 @@ if __name__ == '__main__':
     # palabras_len = list(map....)
 
     # Desarrollo de 1) ***************************
-
+    print('')
+    print('Desarrollo 1')
+    print('')
+    
     len_string = lambda x: len(x)
-   
-    print(len_string('jesus gonzalez')) 
+    string = input('Ingrese una frase ')
+    caracteres = len_string(string)
+    print('')
+
+    print(f'La frase "{string}" tiene {caracteres} caracteres.')
+    print('')
 
     # Desarrollo de 2) ***************************
 
-    palabras_len = map(len_string, palabras)
-    palabras_len = list(palabras_len)
+    print('Desarrollo 2')
+    print('')
+    print('Creamos una lista que mapee una variable y nos lea la longitud')
+    print('')
 
-    print(palabras_len)
-    
+    # Mapeo con lambda y armado de lista 
     palabras_len = list(map(lambda x: len(x), palabras))
-
+    
     print(palabras_len)
 
+    print('')
     print("terminamos")
