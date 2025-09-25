@@ -43,21 +43,26 @@ if __name__ == '__main__':
     # personal_valido = [.....]
 
     # Desarrollo de 1) ***************************
+    print('Vamos a trabajar las dos consignas con el siguiente listado de ID:')
+    print(accesos)
+    print('')
 
-    personal_1_10 = [x for x in accesos if(x <= 10)]
+    print('Desarrollo 1')
+    print('')
 
-    print('Personal del 1 al 10',personal_1_10)
+
+    filtro = [ x for x in accesos if (x < 11)]
+    cantidad = len(filtro)
     
-    print('La cantidad de personal con cuenta menor o igual a 10 que pasó por el molinete es:',len(personal_1_10))
+    print(f'Las personas que pasaron por el molinete con (ID < 10) fueron {cantidad} en total')
+    print('y los ID fueron', filtro )  
+    print('')
 
     # Desarrollo de 2) ***************************
+    print('Desarrollo 2')
+    print('')
 
-    personal_valido = [x for x in accesos if(x in id_validos)]
+    personal_valido = [ x for x in accesos if x in id_validos]
 
-    print('Personal con acceso válido:',personal_valido)
-
-    print("terminamos")
-
-    lista = [x**2 for x in range(5)]
-
-    print(lista)
+    print(f'Solo pueden ingresar los siguientes ID:')
+    print(personal_valido)

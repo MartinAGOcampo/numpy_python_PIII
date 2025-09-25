@@ -48,21 +48,32 @@ if __name__ == '__main__':
     # dias_mes = [.....]
 
     # Desarrollo de 1) ***************************
+    print('Desarrollo 1')
+    print('')
+    print('Generacion de numeros del uno al diez mediante comprension de listas')
 
-    lista_0_10 = [x for x in range(11)]
+    listado = [x for x in range(11)]
 
-    print(lista_0_10)
+    print(listado)
+    print('')
 
     # Desarrollo de 2) ***************************
+    print('Desarrollo 2')
+    print('')
+    print('Multiplicamos la lista anterior *5: ')
 
-    tabla_5 = [x*5 for x in range(11)]
+    x_5 = [x*5 for x in range(11)]
 
-    print(tabla_5)
+    print(x_5)
+    print('')
 
     # Desarrollo de 3) ***************************
+    print('Desarrollo 3')
+    print('')
+    print('Generacion de numeros aleatorios mediante random y generacion de listas')
 
-    dias_mes = [random.randint(1, 30) for x in range(10)]
+    dias = [random.randint(1, 30) for x in range(10)]
 
-    print(dias_mes)
-
+    print(dias)
+    print('')
     print("terminamos")

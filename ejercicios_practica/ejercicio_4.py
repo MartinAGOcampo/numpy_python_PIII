@@ -25,24 +25,40 @@ if __name__ == '__main__':
     # TIP: Recomendamos ver el método "isdigit" de strings
     # para aplicar en este caso.
 
-    list_numeros_str = ['5', '2', '3', '', '7', 'NaN']
+    print('Desarrollo')
+    print('')
+    import random
 
-    lista_numeros = [x if(x.isdigit()) else 0 for x in list_numeros_str]
+    lista_inicial = ["caso", "lila", "mora"] + [random.randint(1, 100) for _ in range(5)]
+    random.shuffle(lista_inicial)
 
-    print(lista_numeros)
+    print(f'Vamos a trabajar con el siguiente listado {lista_inicial}')
+    print('La lista anterior fue generada con 3 palabras predefinidas y 5 numeros elegidos al azar')
+    print('')
+    
+    print('Vamos a extraer las 3 palabras en cualquier ubicacion que este para convertirla a cero:')
+    lista_final = [int(x) if str(x).isdigit() else 0 for x in lista_inicial]    
+    print('')
+
+    print(f'Con las 3 palabras convertidas la lista queda: {lista_final}')
+    print('')
 
     # ¿Ya terminaron el ejercicio? ¿Por qué no prueban
     # hacer negativo alguno de los números de la lista?
     # ¿Qué sucede con isdigit? Sorprendente no?
+    
+    print('Prueba de "isdigit()" con los numeros convertidos en negativo')
+    print(f'Trabajamos con: {lista_final}')
+    print('')
 
-    list_numeros_str = ['-5', '-2', '3', '', '7', 'NaN']
+    lista_neg = [-abs(x) if isinstance(x, int) else x for x in lista_final]
+    print(f'La lista con los valores negativos es {lista_neg}')
+    print('')
+        
+    isdigit_result = [str(x).isdigit() for x in lista_neg]
+    print('Ahora con el metodo isdigit el resultado con valores negativos es:')
+    print(isdigit_result)
 
-    lista_numeros = [x if(x.isdigit()) else 0 for x in list_numeros_str]
-
-    print(lista_numeros)
-
-    # isdigit lo toma como un strings y no como un nro.negativo
-
-    print('isdigit lo toma como un strings y no como un nro.negativo')
-
+    print('Vemos como isdigit lo toma como un strings y no como un nro.negativo')
+    print('')
     print("terminamos")

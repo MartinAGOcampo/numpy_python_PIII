@@ -38,21 +38,35 @@ if __name__ == '__main__':
     # numeros_potencia = list(map....)
 
     # Desarrollo de 1) ***************************
-    
-    potencia_2 = lambda x: x**2
-    pot_3 = potencia_2(3)
 
-    print('El número 3 elevado al cuadrado es:',pot_3)
+    print('Desarrollo 1)')
+    print('')
 
+    funcion_lambda = lambda x: x ** 2
+    # Calculo de potencia en base al ingreso manual
+    ingreso_manual = int(input('Ingrese un numero cualquiera para saber su cuadrado: '))
+    potencia_ = funcion_lambda(ingreso_manual)
+    print(f'El cuadrado de {ingreso_manual} es {potencia_}')
+
+    print('')
     # Desarrollo de 2) ***************************
 
-    numeros_map = map(potencia_2, numeros)
-    numeros_map = list(numeros_map)
+    print('Desarrollo 2)')
+    print('')
 
-    print(numeros_map)
-    
-    numeros_lambda = list(map(lambda x: x**2, numeros))
+    print('Lo que vamos a relizar a continuacion es practica con map')
+    print('Los numeros a continuacion vamos a recorrer y calcular su cuadrado')
 
-    print(numeros_lambda)
+    # Se muestra la lista original "numeros"
+    print(numeros)
+
+    print('')
+
+    # Desarrollo de lambda y la lista nueva "numeros_potencia" en una sola linea
+    numeros_potencia = list(map(lambda x: x**2, numeros))
+    print('Elevados cada uno al cuadrado quedan:')
+    print(f'{numeros_potencia}, todos guardados en una lista nueva llamada numeros_potencia')
+
+    print('')
 
     print("terminamos")
